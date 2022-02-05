@@ -94,4 +94,14 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
+
+h1, h2 {
+  margin-bottom: 15px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
 </style>
