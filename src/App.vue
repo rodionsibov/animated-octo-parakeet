@@ -61,7 +61,7 @@ import Icons from "./components/Icons.vue";
         </p>
       </div>
       <div class="box">
-        <h2><i class="fas fa-mobile"></i>Responsive Design</h2>
+        <h2><i class="fas fa-mobile-alt"></i>Responsive Design</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
           nihil obcaecati nisi cumque magnam eveniet quidem modi. Architecto
@@ -160,7 +160,7 @@ ul {
   min-width: 300px;
 }
 
-svg path {
+.header .icons svg path {
   fill: cyan; 
   opacity: 0.9;
 }
@@ -173,6 +173,15 @@ svg path {
 
 .boxes .container {
   display: flex;
-  
+  justify-content: space-between;
+}
+
+.box {
+  flex: 1;
+  background: #0851cc;
+  color: #fff;
+  border-radius: 10px;
+  margin: 20px 10px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.6);
 }
 </style>
