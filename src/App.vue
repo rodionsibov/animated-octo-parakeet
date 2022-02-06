@@ -1,13 +1,17 @@
 <script setup>
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-import Icons from "./components/Icons.vue";
+import TheIcon from "./components/TheIcon.vue";
+import TheMenu from "./components/TheMenu.vue";
 </script>
 
 <template>
   <nav class="navbar">
     <div class="container">
       <div class="logo">Flexbox</div>
+      <div class="menu">
+        <TheMenu />
+      </div>
       <ul class="nav">
         <li>
           <a href="#">Home</a>
@@ -26,17 +30,16 @@ import Icons from "./components/Icons.vue";
       <div>
         <h1>Flexbox Layout Module</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, ex
-          quas voluptas animi eveniet esse rerum quisquam ab nam error nesciunt
-          deserunt voluptatem beatae iusto, delectus voluptate eum perspiciatis
-          quidem.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Exercitationem aliquid tempore numquam ratione alias eum optio quam
+          dolor distinctio minima?
         </p>
       </div>
       <div class="icons">
-        <Icons />
-        <Icons />
-        <Icons />
-        <Icons />
+        <TheIcon />
+        <TheIcon />
+        <TheIcon />
+        <TheIcon />
       </div>
     </div>
   </header>
@@ -45,28 +48,20 @@ import Icons from "./components/Icons.vue";
       <div class="box">
         <h2><i class="fas fa-arrows-alt-v"></i>Aligment & Space</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
-          nihil obcaecati nisi cumque magnam eveniet quidem modi. Architecto
-          culpa dolorum accusantium, obcaecati cum quo est mollitia magni
-          exercitationem itaque consectetur!
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere,
+          reiciendis.
         </p>
       </div>
       <div class="box">
         <h2><i class="fas fa-arrows-alt"></i>Tricky Positioning</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
-          nihil obcaecati nisi cumque magnam eveniet quidem modi. Architecto
-          culpa dolorum accusantium, obcaecati cum quo est mollitia magni
-          exercitationem itaque consectetur!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, id.
         </p>
       </div>
       <div class="box">
         <h2><i class="fas fa-mobile-alt"></i>Responsive Design</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
-          nihil obcaecati nisi cumque magnam eveniet quidem modi. Architecto
-          culpa dolorum accusantium, obcaecati cum quo est mollitia magni
-          exercitationem itaque consectetur!
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia, iure.
         </p>
       </div>
     </div>
@@ -146,6 +141,7 @@ ul {
   background-color: #0151cc;
   color: #fff;
   min-height: 400px;
+  display: flex;
 }
 
 .header h1 {
@@ -158,10 +154,11 @@ ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
   min-width: 300px;
+  margin: 20px 0;
 }
 
 .header .icons svg path {
-  fill: cyan; 
+  fill: cyan;
   opacity: 0.9;
 }
 
@@ -183,5 +180,37 @@ ul {
   border-radius: 10px;
   margin: 20px 10px;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.6);
+  padding: 15px 20px;
+}
+
+.box i {
+  margin-right: 10px;
+}
+
+.menu {
+  display: none;
+  width: 30px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .header .container {
+    flex-direction: column;
+    padding-top: 20px;
+    text-align: center;
+  }
+
+  .boxes .container {
+    display: block;
+    text-align: center;
+  }
+
+  .navbar ul {
+    display: none;
+  }
+
+  .navbar .menu {
+    display: block;
+  }
 }
 </style>
