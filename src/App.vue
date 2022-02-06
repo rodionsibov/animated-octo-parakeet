@@ -43,7 +43,7 @@ import Icons from "./components/Icons.vue";
   <section class="boxes">
     <div class="container">
       <div class="box">
-        <h2><i class="fas fa-arrow-alt-v"></i>Aligment & Space</h2>
+        <h2><i class="fas fa-arrows-alt-v"></i>Aligment & Space</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
           nihil obcaecati nisi cumque magnam eveniet quidem modi. Architecto
@@ -52,7 +52,7 @@ import Icons from "./components/Icons.vue";
         </p>
       </div>
       <div class="box">
-        <h2><i class="fas fa-arrow-alt-v"></i>Tricky Positioning</h2>
+        <h2><i class="fas fa-arrows-alt"></i>Tricky Positioning</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
           nihil obcaecati nisi cumque magnam eveniet quidem modi. Architecto
@@ -61,7 +61,7 @@ import Icons from "./components/Icons.vue";
         </p>
       </div>
       <div class="box">
-        <h2><i class="fas fa-arrow-alt-v"></i>Responsive Design</h2>
+        <h2><i class="fas fa-mobile"></i>Responsive Design</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
           nihil obcaecati nisi cumque magnam eveniet quidem modi. Architecto
@@ -90,12 +90,8 @@ body {
   background: #a1c3ff;
 }
 
-.icons {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-h1, h2 {
+h1,
+h2 {
   margin-bottom: 15px;
 }
 
@@ -146,5 +142,37 @@ ul {
   margin-left: 20px;
 }
 
+.header {
+  background-color: #0151cc;
+  color: #fff;
+  min-height: 400px;
+}
 
+.header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.header .icons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-width: 300px;
+}
+
+svg path {
+  fill: cyan; 
+  opacity: 0.9;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.boxes .container {
+  display: flex;
+  
+}
 </style>
